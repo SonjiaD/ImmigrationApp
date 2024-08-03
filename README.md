@@ -5,7 +5,7 @@ Amies is an Android application designed to help new immigrants integrate into V
 ## Contributors ##
 Sonja, Zayn, and Lecia
 
-## Full Document ##
+## Full Documentation ##
 Here is the link with images to our full document that outlines all of this progression of creating this application. https://docs.google.com/document/d/1XubiMUmVBejY-FkdqAvdePk69upAV-Yc/edit?usp=sharing&ouid=100416461967112175427&rtpof=true&sd=true
 
 ### Investigation ##

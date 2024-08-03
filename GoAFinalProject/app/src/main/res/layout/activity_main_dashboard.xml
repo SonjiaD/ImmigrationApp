@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityDashboard"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="0dp"
+    tools:ignore="HardcodedText, ContentDescription">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="60dp">
+
+        <TextView
+            android:id="@+id/eventstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Events"
+            android:textColor="@color/woodBrown"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/eventsRecyclerView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventsRecyclerView"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/quizzestitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eventstitle" />
+
+        <TextView
+            android:id="@+id/quizzestitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Quizzes"
+            android:textColor="@color/woodBrown"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eventsRecyclerView" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/quizzesDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="No quizzes here yet. Why don’t you try some?"
+            android:textColor="@color/woodBrown"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizzestitle" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/quizzesPgButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/quiz_button"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@+id/quizzesRecyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizzesDescription" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quizzesRecyclerView"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/quizzesPgButton"
+            tools:layout_editor_absoluteX="-51dp" />
+
+        <TextView
+            android:id="@+id/randomFactOfTheDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Random Fact of the Day"
+            android:textColor="@color/woodBrown"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quizzesRecyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cardRandomFactOfTheDay"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/Discussion"
+            app:layout_constraintTop_toBottomOf="@+id/randomFactOfTheDay">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/Discussion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Discussion"
+            android:textColor="@color/woodBrown"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@id/cardRandomFactOfTheDay"
+            app:layout_constraintBottom_toTopOf="@+id/discussionRecyclerView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/discussionRecyclerView"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/Discussion" >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/main_nav">
+        <item
+            android:id="@+id/home"
+            android:title=""
+            android:icon="@drawable/home"
+            />
+        <item
+            android:id="@+id/book"
+            android:icon="@drawable/book"
+            android:title=""
+            />
+        <item
+            android:id="@+id/speech"
+            android:icon="@drawable/speech"
+            android:title=""
+            />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/person"
+            android:title=""
+            />
+    </group>
+
+
+
+</menu>

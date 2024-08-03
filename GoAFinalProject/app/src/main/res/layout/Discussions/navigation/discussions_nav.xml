@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/discussions_nav"
+    app:startDestination="@id/discussion_p1">
+
+    <fragment
+        android:id="@+id/discussion_p1"
+        android:name="com.example.goafinalproject.Discussion.Fragments.Discussion_p1"
+        android:label="fragment_discussion_p1"
+        tools:layout="@layout/fragment_discussion_p1" >
+        <action
+            android:id="@+id/action_discussion_p1_to_discussion_p2"
+            app:destination="@id/discussion_p2" />
+        <action
+            android:id="@+id/action_discussion_p1_to_createPost"
+            app:destination="@id/createPost" />
+    </fragment>
+    <fragment
+        android:id="@+id/discussion_p2"
+        android:name="com.example.goafinalproject.Discussion.Fragments.Discussion_p2"
+        android:label="fragment_discussion_p2"
+        tools:layout="@layout/fragment_discussion_p2" >
+        <action
+            android:id="@+id/action_discussion_p2_to_discussion_p3"
+            app:destination="@id/discussion_p3" />
+        <action
+            android:id="@+id/action_discussion_p2_to_createPost"
+            app:destination="@id/createPost" />
+        <action
+            android:id="@+id/action_discussion_p2_to_discussion_p1"
+            app:destination="@id/discussion_p1" />
+    </fragment>
+    <fragment
+        android:id="@+id/discussion_p3"
+        android:name="com.example.goafinalproject.Discussion.Fragments.Discussion_p3"
+        android:label="fragment_discussion_p3"
+        tools:layout="@layout/fragment_discussion_p3" >
+        <action
+            android:id="@+id/action_discussion_p3_to_discussion_p2"
+            app:destination="@id/discussion_p2" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPost"
+        android:name="com.example.goafinalproject.CreatePost"
+        android:label="CreatePost"
+        tools:layout="@layout/add_post_page">
+        <action
+            android:id="@+id/action_createPost_to_discussion_p1"
+            app:destination="@id/discussion_p1" />
+    </fragment>
+</navigation>

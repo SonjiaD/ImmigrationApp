@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardviewEvents"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="@color/woodBrown"
+    app:strokeWidth="1dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="391dp"
+                android:layout_height="405dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="217dp"
+                    app:layout_constraintBottom_toTopOf="@+id/title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/woodBrown"
+                    android:text="title"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/woodBrown"
+                    android:text="date"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                <TextView
+                    android:id="@+id/discussiondescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/woodBrown"
+                    android:text="location description"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/date" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="14dp"
+                    android:textSize="14sp"
+                    android:text="time"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/woodBrown"
+                    app:layout_constraintStart_toEndOf="@+id/date"
+                    app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                <TextView
+                    android:id="@+id/city_province"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/woodBrown"
+                    android:text="city_province"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/streetAddress" />
+
+                <TextView
+                    android:id="@+id/postalCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/woodBrown"
+                    android:text="postalCode"
+                    app:layout_constraintStart_toEndOf="@+id/city_province"
+                    app:layout_constraintTop_toBottomOf="@+id/streetAddress" />
+
+                <TextView
+                    android:id="@+id/streetAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/woodBrown"
+                    android:text="streetAddress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/discussiondescription" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="19dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toStartOf="@+id/date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title"
+                    android:src="@drawable/calendar" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="19dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="14dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                    android:src="@drawable/map" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

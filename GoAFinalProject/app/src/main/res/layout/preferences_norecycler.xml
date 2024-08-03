@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/preferences_norecycler"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="textPersonName"
+                android:text="Username"
+                android:textColor="@color/woodBrown"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/topBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/dashboardborder" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/abt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toTopOf="@+id/multiAutoCompleteTextView"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/edit_username">
+
+                <TextView
+                    android:id="@+id/From"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="From"
+                    android:textColor="@color/woodBrown"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/fromedit"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/fromedit" />
+
+                <EditText
+                    android:id="@+id/fromedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:inputType="textPersonName"
+                    android:text="South Korea"
+                    android:textColor="@color/woodBrown"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/From"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/speaks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Speaks"
+                    android:textColor="@color/woodBrown"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/speaksedit"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/speaksedit" />
+
+                <EditText
+                    android:id="@+id/speaksedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:inputType="textPersonName"
+                    android:text="Korean, English"
+                    android:textColor="@color/woodBrown"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/speaks"
+                    app:layout_constraintTop_toBottomOf="@id/fromedit" />
+
+                <TextView
+                    android:id="@+id/job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Job"
+                    android:textColor="@color/woodBrown"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/jobedit"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/speaksedit" />
+
+                <EditText
+                    android:id="@+id/jobedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:inputType="textPersonName"
+                    android:text="Web developer"
+                    android:textColor="@color/woodBrown"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/job"
+                    app:layout_constraintTop_toBottomOf="@id/speaksedit" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Profile"
+                android:textColor="@color/woodBrown"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/topBar"
+                app:layout_constraintStart_toStartOf="@+id/topBar"
+                app:layout_constraintTop_toTopOf="@+id/topBar" />
+
+            <ImageView
+                android:id="@+id/imageButton"
+                android:layout_width="168dp"
+                android:layout_height="178dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/profile1"
+                app:layout_constraintEnd_toStartOf="@+id/edit_username"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+            <EditText
+                android:id="@+id/multiAutoCompleteTextView"
+                android:layout_width="394dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins"
+                android:lines="5"
+                android:maxLength="5"
+                android:textColor="@color/woodBrown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/abt" />
+
+            <ImageView
+                android:id="@+id/line_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/multiAutoCompleteTextView"
+                app:srcCompat="@drawable/line_profile" />
+
+            <LinearLayout
+                android:id="@+id/preference1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/line_profile"
+                android:layout_marginHorizontal="30dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/changepreferences"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/type1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change Preferences"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/woodBrown"
+                        android:textSize="24dp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/icon1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/icon1"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:src="@drawable/icon" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toBottomOf="@id/preference1"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/type2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saved Items"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/woodBrown"
+                        android:textSize="24dp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/icon2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/icon2"
+                        android:src="@drawable/vector"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

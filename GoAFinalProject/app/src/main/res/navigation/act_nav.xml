@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/act_nav"
+    app:startDestination="@id/first_Page">
+
+    <fragment
+        android:id="@+id/education_fragment"
+        android:name="com.example.goafinalproject.education_fragment"
+        android:label="fragment_education_fragment"
+        tools:layout="@layout/education_view" />
+    <fragment
+        android:id="@+id/discussions_fragment"
+        android:name="com.example.goafinalproject.discussions_fragment"
+        android:label="discussions_view"
+        tools:layout="@layout/discussions_view" />
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.example.goafinalproject.profile_fragment"
+        android:label="profile_view"
+        tools:layout="@layout/profile_view" />
+    <fragment
+        android:id="@+id/mainActivityDashboard"
+        android:name="com.example.goafinalproject.MainActivityDashboard"
+        android:label="activity_main_dashboard"
+        tools:layout="@layout/activity_main_dashboard" />
+    <fragment
+        android:id="@+id/personalization"
+        android:name="com.example.goafinalproject.Personalization"
+        android:label="Personalization"
+        tools:layout="@layout/personalization"/>
+    <fragment
+        android:id="@+id/first_Page"
+        android:name="com.example.goafinalproject.First_Page"
+        android:label="First_Page"
+        tools:layout="@layout/first_welcome_pg">
+        <action
+            android:id="@+id/action_first_Page_to_personalization"
+            app:destination="@id/personalization" />
+    </fragment>
+</navigation>

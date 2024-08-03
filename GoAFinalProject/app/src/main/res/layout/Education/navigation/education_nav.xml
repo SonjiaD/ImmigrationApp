@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/education_nav"
+    app:startDestination="@id/education_CategoriesList">
+
+    <fragment
+        android:id="@+id/education_Category"
+        android:name="com.example.goafinalproject.Education.Fragments.Education_Category"
+        android:label="fragment_education__category"
+        tools:layout="@layout/fragment_education__category" >
+        <action
+            android:id="@+id/E_action_EC_to_QL"
+            app:destination="@id/education_QuizList"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/education_QuizView"
+        android:name="com.example.goafinalproject.Education.Fragments.Education_QuizView"
+        android:label="fragment_education__quiz_view"
+        tools:layout="@layout/fragment_education__quiz_view" >
+        <action
+            android:id="@+id/E_action_QV_to_QR"
+            app:destination="@id/education_QuizReview"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/education_CategoriesList"
+        android:name="com.example.goafinalproject.Education.Fragments.education_CategoriesList"
+        android:label="fragment_education__categories_list"
+        tools:layout="@layout/fragment_education__categories_list" >
+        <action
+            android:id="@+id/E_action_CL_to_EC"
+            app:destination="@id/education_Category"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/education_QuizList"
+        android:name="com.example.goafinalproject.Education.Fragments.Education_QuizList"
+        android:label="fragment_education__quiz_list"
+        tools:layout="@layout/fragment_education__quiz_list" >
+        <action
+            android:id="@+id/E_action_QL_to_QV"
+            app:destination="@id/education_QuizView"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/stay"
+            app:popExitAnim="@anim/to_bottom" />
+    </fragment>
+    <fragment
+        android:id="@+id/education_QuizReview"
+        android:name="com.example.goafinalproject.Education.Fragments.Education_QuizReview"
+        android:label="fragment_education__quiz_review"
+        tools:layout="@layout/fragment_education__quiz_review" >
+        <action
+            android:id="@+id/E_action_QR_to_QL"
+            app:destination="@id/education_QuizList"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/education_Resources"
+        android:name="com.example.goafinalproject.Education.Fragments.Education_Resources"
+        android:label="fragment_education__resources"
+        tools:layout="@layout/fragment_education__resources" />
+</navigation>

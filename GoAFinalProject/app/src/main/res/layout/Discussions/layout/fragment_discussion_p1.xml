@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription, AutoFill">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp">
+
+            <LinearLayout
+                android:id="@+id/search_bar_discussion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/search_2"
+                    app:tint="@color/brown" />
+
+                <EditText
+                    android:id="@+id/search_edit_text"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2sp"
+                    android:layout_marginTop="2dp"
+                    android:hint="@string/search_discussion_hint"
+                    android:inputType="text"
+                    android:textAppearance="@style/search_bar_text" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hashtag_section_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/hashtag_title"
+                android:textAppearance="@style/section_title"
+                android:layout_alignStart="@id/search_bar_discussion"
+                android:layout_below="@id/search_bar_discussion" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHashtags"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/hashtag_section_title" />
+
+            <ImageView
+                android:id="@+id/discussion_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvHashtags"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:src="@drawable/line_discussion" />
+
+            <TextView
+                android:id="@+id/keyword_section_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/discussion_line"
+                android:layout_alignStart="@id/search_bar_discussion"
+                android:text="@string/keyword_title"
+                android:textAppearance="@style/section_title" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvKeywords"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/keyword_section_title" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/add_post"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/plus_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

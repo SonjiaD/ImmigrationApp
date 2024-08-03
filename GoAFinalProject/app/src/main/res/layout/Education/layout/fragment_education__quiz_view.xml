@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/E_Q_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Education.Fragments.Education_QuizView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="9dp"
+        tools:context=".Education.Fragments.Education_QuizView">
+
+        <TextView
+            android:id="@+id/E_Q_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp"
+            android:text="1/50"
+            android:textColor="@color/brown"
+            android:textSize="24sp" />
+
+        <ProgressBar
+            android:id="@+id/E_Q_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/E_Q_progress_text"
+            android:progress="2"
+            android:progressDrawable="@drawable/progress_bar_back" />
+
+        <TextView
+            android:id="@+id/E_Q_question_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/E_Q_progress_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="Question goes here?"
+            android:textColor="@color/brown"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/E_Q_image"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_below="@id/E_Q_question_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/question_square" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/E_Q_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/E_Q_image"
+            android:layout_marginTop="40dp"
+            app:columnCount="2"
+            app:orientation="horizontal"
+            app:rowCount="2"
+            app:useDefaultMargins="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_200"
+                app:layout_columnWeight="1">
+
+                <LinearLayout
+                    android:id="@+id/E_Q_answer1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/answer_block_back"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    app:layout_columnWeight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1.2602739726:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/E_Q_A1_letter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="A"
+                        android:textColor="@color/brown"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/E_Q_A1_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="A military leader of the Métis in the 19th century."
+                        android:textColor="@color/brown"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1">
+
+                <LinearLayout
+                    android:id="@+id/E_Q_answer2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/answer_block_back"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    app:layout_columnWeight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1.2602739726:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/E_Q_A2_letter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="B"
+                        android:textColor="@color/brown"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/E_Q_A2_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="A great frontier hero and soldier of the Queen."
+                        android:textColor="@color/brown"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1">
+
+                <LinearLayout
+                    android:id="@+id/E_Q_answer3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/answer_block_back"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    app:layout_columnWeight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1.2602739726:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/E_Q_A3_letter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="C"
+                        android:textColor="@color/brown"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/E_Q_A3_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="The first Prime Minister of Canada."
+                        android:textColor="@color/brown"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1">
+
+                <LinearLayout
+                    android:id="@+id/E_Q_answer4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/answer_block_back"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    app:layout_columnWeight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1.2602739726:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/E_Q_A4_letter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="D"
+                        android:textColor="@color/brown"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/E_Q_A4_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="The Father of Manitoba."
+                        android:textColor="@color/brown"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <TextView
+            android:id="@+id/E_Q_answer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/E_Q_grid"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="42dp"
+            android:drawablePadding="9dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
+            android:text="Nice Try.  The correct answer is B"
+            android:textSize="15sp"
+            app:drawableStartCompat="@drawable/xcircle" />
+
+        <LinearLayout
+            android:id="@+id/E_Q_more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/E_Q_answer_text"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Learn more about..."
+                android:textColor="@color/brown"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/E_Q_more_hidden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="7dp"
+                android:fontFamily="@font/poppins"
+                android:text="Major General Sir Samuel Benfield Steele KCMG CB MVO was a distinguished Canadian soldier and police official. He was an officer of the North-West Mounted Police, most famously as head of the Yukon detachment during the Klondike Gold Rush, and commanding officer of Strathcona's Horse during the Boer War. "
+                android:textColor="@color/brown"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/E_Q_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/E_Q_more"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/next_question_back"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawablePadding="13dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="11dp"
+            android:text="Next Question"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription, AutoFill, HardcodedText">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/post_page_title"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/post_page_title"
+                android:textAppearance="@style/page_title" />
+
+            <TextView
+                android:id="@+id/pp_username"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/post_page_title"
+                android:layout_alignStart="@+id/post_page_title"
+                android:layout_marginStart="5dp"
+                android:text="SoandSo"
+                android:textAppearance="@style/user_name" />
+
+            <TextView
+                android:id="@+id/pp_ht"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/post_page_title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:text="#food #cheese #queso"
+                android:textAppearance="@style/post_text" />
+
+            <TextView
+                android:id="@+id/pp_time"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pp_username"
+                android:layout_alignStart="@id/pp_username"
+                android:layout_marginStart="2dp"
+                android:text="1 day ago"
+                android:textAppearance="@style/post_text" />
+
+            <ImageView
+                android:id="@+id/pp_bm_nofill"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/pp_ht"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/bookmark_no_fill"
+                android:visibility="visible"
+                android:layout_alignEnd="@id/pp_ht" />
+
+            <ImageView
+                android:id="@+id/pp_bm_fill"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/pp_ht"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/bookmark_fill"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/pp_ht" />
+
+            <TextView
+                android:id="@+id/pp_text"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pp_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="I discovered this queso deal at this little shack beside the Pizza Garden at the New Westminster Station. The man selling them looked a bit shady but the food tasted good so it’s fine. I highly recommend. GO CHECK IT OUT FOR YOURSELF! YOU WILL NOT REGRET IT!"
+                android:textAppearance="@style/post_text" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/pp_image"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/pp_text"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/queso"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                app:strokeColor="@color/brown"
+                app:strokeWidth="2dp" />
+
+            <LinearLayout
+                android:id="@+id/pp_likes_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pp_image"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/pp_text">
+
+                <ImageView
+                    android:id="@+id/pp_like_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/heart" />
+
+                <TextView
+                    android:id="@+id/pp_likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="@string/likes"
+                    android:textAppearance="@style/post_time" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/pp_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pp_likes_layout"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/line_discussion" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pp_line"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/comment_add_bkg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/comment_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"/>
+    <EditText
+        android:id="@+id/comment_edit_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/comment_add_bkg"
+        app:layout_constraintEnd_toEndOf="@id/comment_add_bkg"
+        app:layout_constraintTop_toTopOf="@id/comment_add_bkg"
+        android:textAppearance="@style/post_text"
+        android:hint="Type comments here"
+        android:background="@null"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:id="@+id/comment_submit_bkg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/comment_submit"
+        app:layout_constraintStart_toEndOf="@id/comment_add_bkg"
+        app:layout_constraintBottom_toBottomOf="@id/comment_add_bkg"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        />
+    <TextView
+        android:id="@+id/submit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_post_text"
+        android:textAppearance="@id/submit_text"
+        app:layout_constraintTop_toTopOf="@id/comment_submit_bkg"
+        app:layout_constraintBottom_toBottomOf="@id/comment_submit_bkg"
+        app:layout_constraintStart_toStartOf="@id/comment_submit_bkg"
+        android:layout_marginStart="10dp"
+        />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/arrow_3"
+        app:layout_constraintStart_toEndOf="@id/submit_text"
+        app:layout_constraintEnd_toEndOf="@id/comment_submit_bkg"
+        app:layout_constraintTop_toTopOf="@id/comment_submit_bkg"
+        app:layout_constraintBottom_toBottomOf="@id/comment_submit_bkg"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

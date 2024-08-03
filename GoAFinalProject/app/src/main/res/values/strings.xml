@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">GoA Final Project</string>
+    <string name="landacknowledgement">This app was created on the traditional and unceded territories of the Hul’qumi’num, Musqueam, and Coast\n Salish peoples.</string>
+
+    <string name="tab_1">Discussion</string>
+    <string name="tab_2">Reviews</string>
+    <string name="tab_3">Events</string>
+
+    <string name="search_discussion_hint">Enter keywords</string>
+
+    <string name="hashtag_title">Hashtags</string>
+    <string name="hashtag_text_1">#food</string>
+    <string name="hashtag_text_2">#canadalaws</string>
+    <string name="hashtag_text_3">#housing</string>
+    <string name="hashtag_text_4">#learningenglish</string>
+
+    <string name="keyword_title">Keywords</string>
+    <string name="kw_text_1">Korean food</string>
+    <string name="kw_text_2">job application</string>
+    <string name="kw_text_3">housing price</string>
+    <string name="kw_text_4">slang</string>
+
+    <string name="hashtag_pg_title">#food</string>
+    <string name="hashtag_post_title">Mmm this food is good!</string>
+
+    <string name="account_name">User: Soandso</string>
+    <string name="ht_post_text">I discovered this queso at...</string>
+    <string name="post_time">1 day ago</string>
+    <string name="likes">1537</string>
+    <string name="post_page_title">Mmm this food is good!</string>
+
+    <string name="submit_post_text">Post</string>
+
+    <string name="add_ht_text">#asdfghjkl</string>
+    <string name="added_ht_text">#food</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Education  -->
+    <string name="practice_tests">\nPractice Tests</string>
+    <string name="resources">\nResources</string>
+
+
+</resources>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/background_personalization">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/asking_questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="93dp"
+                    android:layout_marginBottom="66dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="What would you \n like to know about?"
+                    android:textAllCaps="false"
+                    android:textColor="@color/woodBrown"
+                    android:textSize="28sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="26dp">
+
+                <TextView
+                    android:id="@+id/resettlement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center_horizontal"
+                    android:text="Resettlement Services &amp; Legal Help"
+                    android:textAllCaps="true"
+                    android:textColor="@color/woodBrown"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.example.goafinalproject.RowLayout
+                    android:id="@+id/row_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="47dp"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="10dp">
+
+                </com.example.goafinalproject.RowLayout>
+
+                <TextView
+                    android:id="@+id/housing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Housing, Food &amp; Transportation"
+                    android:textAllCaps="true"
+                    android:textColor="@color/woodBrown"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.example.goafinalproject.RowLayout
+                    android:id="@+id/row_layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="47dp"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="10dp">
+
+                </com.example.goafinalproject.RowLayout>
+
+                <TextView
+                    android:id="@+id/education"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Education"
+                    android:textAllCaps="true"
+                    android:textColor="@color/woodBrown"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.example.goafinalproject.RowLayout
+                    android:id="@+id/row_layout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="47dp"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="10dp">
+
+                </com.example.goafinalproject.RowLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="39dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@drawable/update_button"
+                    android:minHeight="0dp"
+                    android:text="update"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/woodBrown" />
+
+                <TextView
+                    android:id="@+id/updatable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="57dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="You can add or remove interests later."
+                    android:textColor="@color/woodBrown"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

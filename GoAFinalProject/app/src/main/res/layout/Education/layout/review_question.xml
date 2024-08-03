@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/E_Q_R_Q_back"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="5dp"
+    android:background="@drawable/question"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/E_Q_R_Q_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Who were the Acadians the descendants of?"
+            android:textColor="@color/brown"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/wrong" />
+
+        <ImageView
+            android:id="@+id/E_Q_R_Q_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/down" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/E_Q_R_Q_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="You answered:"
+        android:textColor="@color/wrong3"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/E_Q_R_Q_wronganswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/poppins"
+        android:text="A military leader of the Métis in the 19th century."
+        android:textColor="@color/brown"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/E_Q_R_Q_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Correct answer:"
+        android:textColor="@color/correct3"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/E_Q_R_Q_correctanswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/poppins"
+        android:text="A great frontier hero and soldier of the Queen."
+        android:textColor="@color/brown"
+        android:textSize="16sp" />
+
+</LinearLayout>

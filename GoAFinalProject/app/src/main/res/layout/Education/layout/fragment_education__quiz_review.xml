@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Education.Fragments.Education_QuizReview">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="ifContentScrolls">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/E_Q_R_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Results"
+                android:textColor="@color/brown"
+                android:textSize="40sp" />
+
+            <ProgressBar
+                android:id="@+id/E_Q_R_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_below="@id/E_Q_R_title"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/circular_shape"
+                android:indeterminate="false"
+                android:progress="100"
+                android:progressDrawable="@drawable/circular_progress_bar" />
+
+
+            <TextView
+                android:id="@+id/E_Q_R_progressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/E_Q_R_progressBar"
+                android:layout_alignTop="@id/E_Q_R_progressBar"
+                android:layout_alignEnd="@id/E_Q_R_progressBar"
+                android:layout_alignBottom="@id/E_Q_R_progressBar"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:labelFor="@id/E_Q_R_progressBar"
+                android:text="80%"
+                android:textColor="@color/brown"
+                android:textSize="34sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/E_Q_R_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/E_Q_R_progressBar"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="60dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/E_Q_R_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/next_question_back"
+        android:elevation="1dp"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="15dp"
+        android:text="Go Back to C Home"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

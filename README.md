@@ -8,6 +8,9 @@ Sonja, Zayn, and Lecia
 ## Full Documentation ##
 Here is the link with images to our full document that outlines all of this progression of creating this application. https://docs.google.com/document/d/1XubiMUmVBejY-FkdqAvdePk69upAV-Yc/edit?usp=sharing&ouid=100416461967112175427&rtpof=true&sd=true
 
+Also here is the link to a Canva presentation, that shows all the design panels our team created for the application. 
+https://www.canva.com/design/DAGMSC4mg44/Sor3WpgGTQXmff6D1evHDQ/edit?utm_content=DAGMSC4mg44&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 ### Investigation ##
 
 Using skills that we have learned over the course of the Game of Apps Program, we planned to create an app that fits the theme of equity. Since we all have relations to immigrations and experience in relation to immigration, we decided to create an immigration app to help facilitate the process of getting used to the culture and society. Sonja and Lecia had previously learned some coding in Java and xml. Zayn was very proficient in Java and coding in general. Yunso and Lina learned about design, although Sonja also had interest and partook in designing processes. Ryan had some previous coding experiences. We had two groups, Designers and Developers to design and develop the app, which later became “AMIES”.
